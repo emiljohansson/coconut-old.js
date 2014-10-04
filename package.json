@@ -2,7 +2,6 @@
   "name": "coconut",
   "version": "0.0.2",
   "description": "html5 game engine",
-  "main": "gruntfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
