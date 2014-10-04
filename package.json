@@ -1,0 +1,31 @@
+{
+  "name": "coconut",
+  "version": "0.0.2",
+  "description": "html5 game engine",
+  "main": "gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html5",
+    "game",
+    "engine",
+    "js",
+    "javascript"
+  ],
+  "author": "Emil Johansson <emiljohansson.se@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt-autoprefixer": "^1.0.1",
+    "grunt-bower-install": "^1.6.0",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-include-source": "^0.4.1",
+    "grunt-mocha": "^0.4.11",
+    "grunt-sass": "^0.14.2",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.21.4",
+    "time-grunt": "^1.0.0"
+  }
+}

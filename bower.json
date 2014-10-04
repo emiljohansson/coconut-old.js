@@ -1,0 +1,27 @@
+{
+  "name": "coconut",
+  "version": "0.0.2",
+  "description": "html5 game engine",
+  "keywords": [
+    "html5",
+    "game",
+    "engine",
+    "js"
+  ],
+  "authors": [
+    "Emil Johansson <emiljohansson.se@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "easeljs": "*",
+    "blanket": "~1.1.5",
+    "chai": "~1.9.2"
+  }
+}

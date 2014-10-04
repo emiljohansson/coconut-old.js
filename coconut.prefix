@@ -1,0 +1,8 @@
+/**
+ * ...
+ *
+ * https://github.com/emiljohansson/coconut.js
+ * @author Emil Johansson <emiljohansson.se@gmail.com>
+ * License: MIT
+ */
+(function(window, document, undefined) {
