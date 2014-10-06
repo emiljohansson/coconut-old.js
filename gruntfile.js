@@ -33,6 +33,8 @@ module.exports = function (grunt) {
             dist: {
                 src: [
                     '<%= pkg.name %>.prefix',
+                    'src/coconut.js',
+                    'src/unit/Entity.js',
                     'src/**/*.js',
                     '<%= pkg.name %>.suffix'
                 ],
@@ -60,9 +62,20 @@ module.exports = function (grunt) {
                     run: true
                 }
             }
+        },
+
+        watch: {
+            scripts: {
+                files: 'src/**/*.js',
+                tasks: ['clean:dist', 'concat'],
+                options: {
+                    debounceDelay: 250,
+                },
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-mocha');
     grunt.loadNpmTasks('grunt-bower-install');
     grunt.loadNpmTasks('grunt-include-source');
@@ -79,6 +92,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'build'
     ]);
+
 
     grunt.registerTask('test', [
         'mocha'
