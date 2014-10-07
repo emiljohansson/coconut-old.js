@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Mocha Spec Runner</title>
+    <link rel="stylesheet" href="../bower_components/blanket/test/vendor/mocha.css" />
+</head>
+<body>
+    <script src="../bower_components/blanket/test/vendor/mocha.js"></script>
+    <script src="../bower_components/chai/chai.js"></script>
+    <script type="text/javascript" src="../bower_components/blanket/dist/qunit/blanket.js" data-cover-adapter="../bower_components/blanket/src/adapters/mocha-blanket.js"></script>
+
+    <script src="../bower_components/easeljs/lib/easeljs-0.7.1.combined.js"></script>
+	<script src="../bower_components/SoundJS/lib/soundjs-0.5.2.combined.js"></script>
+    <script src="../bower_components/preloadjs/lib/preloadjs-0.4.1.min.js"></script>
+	<script src="../bower_components/SoundJS/lib/flashplugin-0.5.2.combined.js"></script>
+
+    <script>
+        (function() {
+            'use strict';
+            window.tests = [
+                'coconut'
+            ];
+            var projectRoot = '../';
+            window.loadScripts = function(scripts, dir, cover) {
+                for (var i = 0; i < scripts.length; i++) {
+                    document.write("<script src='" + projectRoot + dir + scripts[i] + ".js'"+(cover ? " data-cover" : "")+"><\/script>" );
+                }
+            };
+        })();
+    </script>
+
+    <script>
+        (function() {
+            'use strict';
+
+            mocha.setup('bdd');
+
+            // Chai
+            window.assert = chai.assert;
+            window.expect = chai.expect;
+            window.should = chai.should();
+
+            window.loadScripts(window.tests, 'src/', true);
+            window.loadScripts(window.tests, 'test/');
+        })();
+
+        // Only tests run in real browser, injected script run if options.run == true
+        if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+            mocha.run();
+        }
+    </script>
+
+    <div id="mocha"></div>
+</body>
+</html>

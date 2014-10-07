@@ -35,6 +35,7 @@ module.exports = function (grunt) {
                     '<%= pkg.name %>.prefix',
                     'src/coconut.js',
                     'src/unit/Entity.js',
+                    'src/plugin/Plugin.js',
                     'src/**/*.js',
                     '<%= pkg.name %>.suffix'
                 ],
