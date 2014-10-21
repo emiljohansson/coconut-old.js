@@ -9,7 +9,7 @@
 <body>
     <script src="../bower_components/blanket/test/vendor/mocha.js"></script>
     <script src="../bower_components/chai/chai.js"></script>
-    <script type="text/javascript" src="../bower_components/blanket/dist/qunit/blanket.js" data-cover-adapter="../bower_components/blanket/src/adapters/mocha-blanket.js"></script>
+    <script src="../bower_components/blanket/dist/qunit/blanket.js" data-cover-adapter="../bower_components/blanket/src/adapters/mocha-blanket.js"></script>
 
     <script src="../bower_components/easeljs/lib/easeljs-0.7.1.combined.js"></script>
 	<script src="../bower_components/SoundJS/lib/soundjs-0.5.2.combined.js"></script>
@@ -20,7 +20,8 @@
         (function() {
             'use strict';
             window.tests = [
-                'coconut'
+                'coconut',
+                'system/Session'
             ];
             var projectRoot = '../';
             window.loadScripts = function(scripts, dir, cover) {

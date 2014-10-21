@@ -5,9 +5,5 @@ this.coconut = this.coconut || {
      * @type String
      * @static
      */
-    version: "0.0.2",
-
-    //need here?
-    behavior: {},
-    plugin: {}
+    version: "0.0.3"
 };
